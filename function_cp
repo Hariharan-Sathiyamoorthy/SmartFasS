@@ -1,0 +1,462 @@
+#!/usr/bin/python
+
+#Code for the DLS Framework
+
+import sys
+import os
+import time
+import csv
+from datetime import datetime, timedelta 
+import requests
+import redis
+from os import path
+import pandas as pd
+
+
+# Create different databases in Redis to store cache information of libraries
+
+r1 = redis.StrictRedis(host='localhost', port=6379, db=1)
+r2 = redis.StrictRedis(host='localhost', port=6379, db=2)
+r3 = redis.StrictRedis(host='localhost', port=6379, db=3)
+r4 = redis.StrictRedis(host='localhost', port=6379, db=4)
+r5 = redis.StrictRedis(host='localhost', port=6379, db=5)
+
+arguments = sys.argv
+arg_count = len(sys.argv)
+
+now = datetime.now()
+dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
+request_time = dt_string
+
+
+if len(sys.argv) >= 2:
+    function = sys.argv[1] 
+
+
+# Function to check the runtime of the function and validate if it is the right input
+
+def runtime():
+
+    # Check and confirm that exactly and only one function is passed at a time as argument to this script
+    if arg_count == 2:
+
+        if path.exists(function):
+
+            ext = arguments[1].split('.')
+
+            if len(ext) > 1:
+                runtime = ext[1]
+
+
+    # Run the code only when it is a Python script, else quit execution
+
+                if runtime == 'py':
+                    print("\nRuntime is Python!\n")
+                    return ("python")
+                elif runtime == 'js':
+                    print("\nRuntime is JavaScript!")
+                    print("\nAt this point function does not support JavaScript! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                elif runtime == 'rb':
+                    print("\nRuntime is Ruby!")
+                    print("\nAt this point function does not support JavaScript! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                elif runtime == 'jar':
+                    print("\nRuntime is Java!")
+                    print("\nAt this point function does not support Java! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                elif runtime == 'php':
+                    print("\nRuntime is PHP!")
+                    print("\nAt this point function does not support PHP! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                elif runtime == 'swift':
+                    print("\nRuntime is Swift!")
+                    print("\nAt this point function does not support Swift! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                elif runtime == 'go':
+                    print("\nRuntime is Go!")
+                    print("\nAt this point function does not support golang! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+                else:
+                    print("\nUnknown runtime! Quitting!\n")
+                    time.sleep(1)
+                    exit()
+
+            else:
+                print("\nRuntime could not be identified! Quitting!\n")
+                time.sleep(1)
+                exit()
+
+        else:
+            print ("\nThe specified function - {} could not be found!\n".format(function))
+            print ("Please check the input again!\n")
+            print ("Quitting the execution now!\n")
+            time.sleep(1)
+            exit()
+
+    elif arg_count > 2:
+        print ("\nThere are more than one functions found! Please enter only one at a time!\n")
+        print ("Quitting the execution now!\n")
+        time.sleep(1)
+        exit()
+
+    elif arg_count == 1:
+        print("\nNo function found to execute! Quitting!\n")
+        print("Quitting the execution now!\n")
+        time.sleep(1)
+        exit()
+
+
+# check whether the warm container identified is occupied or free
+
+def container_pulse(container):
+    print("Inside container_pulse",container)
+    cmd = "ps -ef | grep %s | grep docker | wc -l"%(container)
+    count =  os.popen(cmd).read().strip()
+    print("the count is",count)
+    if int(count) > 1:
+        pulse  = 1          #Pulse = 1 means warm container is already occupied
+    else:
+        pulse = 0           #Pulse = 0 means warm container is free and not occupied
+
+    return (pulse)
+
+
+
+# Calculate the total tunraround time for executing a function
+
+def logger(cmd2):
+
+    cmd1 = 'echo $(($(date +%s%N)/1000000))'
+    exec_start = os.popen(cmd1).read().strip()
+
+    print ("Installing required libraries...\n")
+
+    os.system(cmd2)
+    cmd3 = ("cat /tmp/pip_log")
+    exec_end = os.popen(cmd3).read().strip()
+    time = (int(exec_end) - int(exec_start))
+    return (time)
+
+
+# Check the validity of the dependent libraries used in the Python script
+
+def libraries(container):
+    
+    cmd = "cat %s | grep ^import | sed -e 's/import//g' | sed 's/ //g'" % (function)
+    cont = os.popen(cmd).read().strip()
+    lib = cont.split()
+    print('libbbb',lib)
+    lib_cpath = 'sql' + '_cpath'
+    print('redisget',r3.get(lib_cpath))
+    for x in lib:
+    
+        response = requests.get("https://pypi.org/pypi/{}/json".format(x))
+    
+        if response.status_code == 200:  # Checks if the library is valid
+    
+            lib_cpath = x + '_cpath'
+            print("Library is valid!",lib_cpath)
+            if r3.exists(lib_cpath) == True: # Check if the library is already present in the cache
+    
+                whl_path = r3.get(lib_cpath).decode('utf-8')
+    
+                splt_char = "/"
+                K = 4
+    
+                temp = whl_path.split(splt_char)
+                res = splt_char.join(temp[:K]), splt_char.join(temp[K:])
+    
+                whl = '/cache/' + res[1]
+                print("whl",whl)    
+                cmd = "docker exec {0} pip install {1} && echo $(($(date +%s%N)/1000000)) > /tmp/pip_log".format(container,whl)
+
+                install_time = logger(cmd)
+
+                cache(x, install_time)
+
+    
+            else: #Download the library if it is not present in cache
+                
+                print("Downloading libraries as it's not found in cache...\n")
+
+                cmd = "docker exec {0} pip install {1} && echo $(($(date +%s%N)/1000000)) > /tmp/pip_log".format(container,x)
+
+                install_time = logger(cmd)
+
+                cache(x, install_time)
+
+        return (install_time)
+
+
+# Resource manager to identify resources for execution
+
+def resource(env):
+    
+    print("Inside Resource")
+    cmd1 = "docker ps | grep -i _%s | grep -i warm | grep -v prewarm | wc -l"%(env)
+    warm = os.popen(cmd1).read().strip()
+    print(warm)
+
+    if int(warm) >= 1:   #This means at least one warm container is present
+        print("inside")
+        execution_type = "warm"
+
+        cmd = "docker ps --format '{{.Names}}' | grep -i _%s | grep -i warm | grep -v prewarm"%(env)
+        out = os.popen(cmd).read().strip().split()
+        containers = sorted(out)
+        for x in containers:
+
+            pulse = container_pulse(x)
+            print("yeeee",pulse)
+            if pulse == 0:
+                
+                container = x
+                print("yoooo",container)
+                break
+            # print("yoooo",container)
+
+
+    else:        #Create a new warm container 
+
+        execution_type = "cold"
+        
+        container = 'dls_warm0_10_python'  # Name allocated for first cold container created
+        cmd = "docker run -v /home/hari73118/.cache/:/cache/ -dit --name %s python:3.10-alpine"%container
+        os.popen(cmd)
+
+    print("Container is",container)
+    install_time = libraries(container) #install required libraries on new container
+
+
+    execution_time = execute(container, function) #execute the function in new container
+    total_time = int(install_time) + int(execution_time) #Calculate total execution time
+
+    with open('functions_list.csv', 'a') as file:
+        writer = csv.writer(file)
+        writer.writerow([request_time, function, total_time, execution_type])
+
+
+# To execute the function and then stop the container
+    
+def execute(container,request): 
+
+    cmd0 = "docker cp {0} {1}:/".format(request, container)
+    os.popen(cmd0)
+
+    print("\n")
+
+    cmd1 = 'echo $(($(date +%s%N)/1000000))'
+    exec_start = os.popen(cmd1).read().strip()
+
+    # Print output of script execution on screen
+
+    print ("Output of the execution is:\n")
+    print ("{")
+
+    cmd2 = "docker exec -i {0} python /{1} && echo $(($(date +%s%N)/1000000)) > /tmp/exec_log".format(container,request)
+    os.system(cmd2)
+
+    print ("}")
+
+    cmd3 = ("cat /tmp/exec_log")
+    exec_end = os.popen(cmd3).read().strip()
+
+    execution_time = (int(exec_end) - int(exec_start))
+
+    print ("\nExecution complete! Function execution time is - {}ms\n".format(execution_time))
+
+    cmd2 = "docker container kill {0}".format(container)
+    os.popen(cmd2)
+    time.sleep(2)
+    cmd3 = "docker container rm {0}".format(container)
+    os.popen(cmd3)
+
+    return (execution_time)
+
+
+# Cache manager to retrieve and update information about the dependent libraries
+
+def cache(lib, install_time):
+
+    lib_freq = lib+'_freq'
+    lib_count = lib+'_count'
+    lib_cpath = lib+'_cpath'
+    lib_last_used = lib+'_last_used'
+    lib_install_time = lib+'_install_time'
+    cpath = 'None'
+
+    cache_dir = "/home/hari73118/.cache/pip/wheels"
+
+    now = datetime.now()
+    today = now.strftime("%Y-%m-%d")
+
+    if path.exists(cache_dir):
+        print("Path exists")
+        cmd = "find %s -name '*.whl' | grep -i %s"%(cache_dir,lib)
+        cpath = os.popen(cmd).read().strip()
+
+
+    entry = r1.exists(lib_freq)
+    time = r5.exists(lib_install_time)
+    if(entry != 0):
+        freq = r1.get(lib_freq).decode('utf-8')
+
+    
+    # print("redisss",freq,entry,time)
+
+    # Updates the last used date of the library 
+
+    if time == 0:
+        r5.set(lib_install_time, install_time)
+
+    else:
+        time_old = r5.get(lib_install_time)
+        
+        if int(time_old) < int(install_time):
+            r5.set(lib_install_time, install_time)
+
+
+    # Updates the frequency of the library
+
+    if entry == 0:
+        r1.set(lib_freq,'NEW')
+        r2.set(lib_count,1)
+        r4.set(lib_last_used,today)
+
+
+    elif (entry !=0 and freq == 'NEW'):
+        r1.set(lib_freq,'INFREQUENT')
+        r2.set(lib_count,2)
+        r4.set(lib_last_used,today)
+    elif (entry !=0 and freq == 'INFREQUENT'):
+
+        count = int(r2.get(lib_count))
+        print("count",count)
+        if count >= 5:
+
+            r1.set(lib_freq,'FREQUENT')
+            r4.set(lib_last_used,today)
+
+            # Find the cache path, update it in redis and retain the cache
+
+            cmd = "find /home/hari73118/.cache/pip/wheels -name '*.whl' |grep -i %s-"%lib
+            result = os.popen(cmd).read().strip()
+            cpath = result.split()
+
+            if path.exists(cpath[0]):
+                r3.set(lib_cpath,cpath[0])
+
+        elif count < 5:
+
+            count += 1
+            r2.set(lib_count,count)
+            r4.set(lib_last_used,today)
+
+
+    elif (entry !=0 and freq == 'FREQUENT'):
+
+        # Check last used date of library, if it's used more than 10 days before then delete it and set status again to infrequent
+
+        r4.set(lib_last_used,today)
+        cmd1 = "pwd"
+        pathzz = os.popen(cmd1).read().strip()
+        cmd = "find /home/hari73118/.cache/pip/wheels -name '*.whl' | grep -i %s-"%lib
+        result = os.popen(cmd).read().strip()
+        cpath = result.split()
+
+        if path.exists(cpath[0]):
+            r3.set(lib_cpath,cpath[0])
+
+    now = datetime.now()
+    today = now.strftime("%Y-%m-%d")
+    last_used = r4.get(lib_last_used).decode('utf-8') 
+    print(last_used);
+    d1 = datetime.strptime(today, "%Y-%m-%d")
+    d2 = datetime.strptime(last_used, "%Y-%m-%d")
+    difference = (abs((d1 - d2).days))
+
+    if difference == 0:
+
+        r1.exists(lib_cpath)
+
+
+# Forecast function to start containers according to times scheduled in forecast.csv
+
+def forecast():
+
+    header_list = ["time"]
+    filename = "forecast.csv"
+    df = pd.read_csv(filename,names=header_list)
+
+    t_setup = 0;
+
+    if len(sys.argv) == 3:
+
+        forecast_function = sys.argv[2]
+
+        if path.exists(forecast_function):
+
+            ext = forecast_function.split('.')
+
+            if len(ext) > 1:
+                runtime = ext[1]
+
+                if runtime == 'py':
+                    
+                    cmd = "cat %s | grep ^import | sed -e 's/import//g' | sed 's/ //g'" % (forecast_function)
+                    cont = os.popen(cmd).read().strip()
+                    lib = cont.split()
+
+                    #calculate the total t_setup time for all libraries, before which the container should be started
+
+                    for x in lib:
+
+                        lib_install_time = x+'_install_time'
+
+                        if r5.exists(lib_install_time):
+                            time  = r5.get(lib_install_time)
+
+                        else:
+                            time = 0;
+                        
+                        t_setup += int(time);
+                
+                else:
+                    print ("\nCannot forecast times for "+forecast_function+", as it is not a Python script! Quitting!\n")
+                    exit()
+        else:
+            print ("\nFunction "+forecast_function+" does not exist! Quitting!\n")
+            exit()
+
+    delay = (int(t_setup)/1000)     #total value of t_setup in seconds
+
+    for i in range(len(df)):
+
+        x = (df.loc[i, "time"])
+        time = datetime.strptime(x,'%H:%M:%S')
+        result = time - timedelta(seconds=delay)  #Calculate the timestamp before t_setup seconds 
+        result_time = str(result).split(' ',1)
+        y = result_time[1]
+
+        schedule = y.split(':',2)
+        hour = schedule[0]
+        minute = schedule[1]
+        second = schedule[2]
+
+        cmd = "echo 'sleep {0}; docker run -v /root/.cache/:/cache/ -dit --name dls_warm0_10_python python:2.7-alpine; docker exec dls_warm0_10_python pip install sql' | at {1}:{2}".format(second, hour, minute)
+        print ("One container(s) scheduled to start at "+str(y)+"")
+
+
+if function.lower() == "forecast":
+    forecast()
+    exit()
+else:
+    env = runtime()
+    pulse = resource(env)
