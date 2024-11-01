@@ -1,12 +1,21 @@
 import path from 'path';
 import fs from 'fs';
 import { exec } from 'child_process';
+import { createClient } from 'redis';
 
+const client = createClient();
 
+client.on('error', err => console.log('Redis Client Error', err));
 // storing the argument in a variable
+await client.connect();
 
+await client.set('key', 'value');
+const value = await client.get('key');
+console.log(value);
+await client.disconnect();
 const args = process.argv.slice(2);
 const argCount = args.length;
+
 
 
 
@@ -30,6 +39,14 @@ const getRuntime = (args) => {
 
 // storing the cache in the redis
 const storeCacheInRedis = (npmPackage,time) => {
+    let lib_frequency = lib+'_freq'
+    let lib_freq = lib+'_freq'
+    let lib_count = lib+'_count'
+    let lib_cpath = lib+'_cpath'
+    let lib_last_used = lib+'_last_used'
+    let lib_install_time = lib+'_install_time'
+    let cpath = 'None'
+    let cacheDir = '/home/hari73118/.npm/'
     
 }
 
@@ -140,6 +157,6 @@ const checkWarmContainer = () => {
     });
     installNpmPackage(executionType,containerName);
 }
-const runtime =  getRuntime(args);
-
-checkWarmContainer(runtime);
+// const runtime =  getRuntime(args);
+console.log(args);
+// checkWarmContainer(runtime);
