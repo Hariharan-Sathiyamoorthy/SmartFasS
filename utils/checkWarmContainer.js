@@ -1,6 +1,10 @@
 import { exec } from 'child_process';
 import util from 'util';
 
+/**
+ * handle in use conatiners
+ */
+
 const execPromise = util.promisify(exec);
 
 const checkWarmContainer = async (runtime) => {
@@ -37,7 +41,7 @@ const checkWarmContainer = async (runtime) => {
             executionType = 'cold';
             containerName = 'dls_node_warm';
 
-            await execPromise(`sudo docker run -v /home/hari73118/.npm/:/root/.npm -dit --name ${containerName} node:20-alpine`);
+            await execPromise(`sudo docker run -e NODE_PATH=/usr/local/lib/node_modules -v /home/hari73118/.npm/:/root/.npm -dit --name ${containerName} node:20-alpine`);
             console.log('inside cold container');
         }
         return {executionType,containerName};

@@ -7,6 +7,16 @@ import fs from 'fs';
 const execPromise = util.promisify(exec);
 const client = createClient();
 
+/**
+ * change npm package name to dynamic
+ */
+
+/**
+ * 
+ * @param {*} npmPackage 
+ * @param {*} time 
+ */
+
 const storeCacheInRedis = async (npmPackage,time) => {
     console.log('inside storeCacheInRedis');
     
@@ -88,7 +98,7 @@ const storeCacheInRedis = async (npmPackage,time) => {
 const installNpmPackage = async (containerName,args) => {
     try {
         await client.connect();
-        const { stdout: getPackageName } = await execPromise(`cat ${args[0]} | grep ^import | sed -e "s/.*from '//" -e "s/';//"`);
+        const { stdout: getPackageName } = await execPromise(`cat ${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
         let npmPackages = getPackageName.split('\n').filter(n => n);
         console.log(npmPackages);
         await Promise.all(npmPackages.map(async (npmPackage) => {

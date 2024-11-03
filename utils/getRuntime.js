@@ -6,7 +6,7 @@ const getRuntime = async (args) => {
     return fs.access(args[0])
         .then(() => {
             let runtime = path.extname(args[0]);
-            if (runtime === '.js') {
+            if (runtime === '.js' || runtime === '.mjs') {
                 return 'node';
             } else {
                 console.log('Unsupported file type');
