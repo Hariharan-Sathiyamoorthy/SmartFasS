@@ -6,20 +6,13 @@
  * 
  */
 
-import { createClient } from 'redis';
+// import { createClient } from 'redis';
+import lodash from 'lodash';
 
-const client = await createClient()
-  .on('error', err => console.log('Redis Client Error', err))
-  .connect();
 
-await client.set('key', 'value');
-const value = await client.get('key');
-console.log(value)
-await client.disconnect();
-const args = process.argv;
-const argCount = process.argv.length;
 
-console.log(argCount);
+
+console.log("Hello World!");
 
 
 
