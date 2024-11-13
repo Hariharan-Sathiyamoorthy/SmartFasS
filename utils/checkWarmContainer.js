@@ -11,33 +11,31 @@ const execPromise = util.promisify(exec);
 const checkWarmContainer = async (runtime) => {
     try {
         let executionType, totalCount, containerName;
-        const { stdout: warmContainerCountStdout } = await execPromise(`sudo docker ps |  grep coldMitigation_${runtime} | wc -l`);
+        const { stdout: warmContainerCountStdout } = await execPromise(`sudo docker ps --format '{{.Names}}' | grep coldMitigation_${runtime} | wc -l`);
         let warmContainerCount = parseInt(warmContainerCountStdout);
-
 
         if (warmContainerCount >= 1) {
             executionType = 'warm';
-
             const { stdout: containersStdout } = await execPromise(`sudo docker ps --format '{{.Names}}' | grep coldMitigation_${runtime}`);
             let sortedContainers = containersStdout.split('\n').sort((a, b) => a - b);
 
+            // let foundContainer = false;
+            // for (const container of sortedContainers) {
+            //     if (foundContainer) break;
 
-            let foundContainer = false;
-            for (const container of sortedContainers) {
-                if (foundContainer) break;
+            //     const { stdout: countStdout } = await execPromise(`ps -ef | grep ${container} | grep docker | wc -l`);
+            //     console.log('countStdout:', countStdout);
+            //     let count = parseInt(countStdout);
 
-                const { stdout: countStdout } = await execPromise(`ps -ef | grep ${container} | grep docker | wc -l`);
-                console.log('countStdout:', countStdout);
-                let count = parseInt(countStdout);
-
-                console.log('count is:', count);
-                totalCount = count > 1 ? 1 : 0;
-                if (totalCount === 0) {
-                    containerName = container;
-                    console.log('yooo', containerName);
-                    foundContainer = true;
-                }
-            }
+            //     console.log('count is:', count);
+            //     totalCount = count > 1 ? 1 : 0;
+            //     if (totalCount === 0) {
+            //         containerName = container;
+            //         console.log('yooo', containerName);
+            //         foundContainer = true;
+            //     }
+            // }
+            containerName = sortedContainers[0];
         } else {
             executionType = 'cold';
             // create a new container with uuid

@@ -18,8 +18,6 @@ const client = createClient();
  */
 
 const storeCacheInRedis = async (npmPackage,time) => {
-    console.log('inside storeCacheInRedis');
-    
     let lib_frequency = npmPackage+'_freq'
     let lib_count = npmPackage+'_count'
     let lib_last_used = npmPackage+'_last_used'
@@ -30,17 +28,13 @@ const storeCacheInRedis = async (npmPackage,time) => {
 
         if(fs.existsSync(cacheDir)){
             const { stdout } = await execPromise(`npm cache ls ${npmPackage}`);
-            console.log(stdout);
             let resArr = stdout.split('\n');
             if(resArr.length > 1){
                 await client.set(lib_cacheFound,'true')
             }
         }
-        console.log('before totalEntries');
-        
         let totalEntries = await client.exists(lib_frequency)
         // let installTime = client.exists(lib_install_time)
-        console.log(totalEntries);
     
         if (totalEntries === 0){
             await client.set(lib_frequency,'NEW')
@@ -56,7 +50,7 @@ const storeCacheInRedis = async (npmPackage,time) => {
                 await client.set(lib_last_used,'TIME')
             }else if(totalEntries > 0 && frequency === 'COMMON'){
                 let count = parseInt(await client.get(lib_count)) + 1
-                console.log(count); 
+
                 await client.set(lib_frequency,'COMMON')
                 await client.set(lib_count,count)
                 await client.set(lib_last_used,'TIME')
@@ -98,9 +92,8 @@ const storeCacheInRedis = async (npmPackage,time) => {
 const installNpmPackage = async (containerName,args) => {
     try {
         await client.connect();
-        const { stdout: getPackageName } = await execPromise(`cat ${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
+        const { stdout: getPackageName } = await execPromise(`cat /home/hari73118/project/${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
         let npmPackages = getPackageName.split('\n').filter(n => n);
-        console.log(npmPackages);
         await Promise.all(npmPackages.map(async (npmPackage) => {
             const { stdout: npmView } = await execPromise
             (`sudo npm view ${npmPackage}`);
@@ -109,7 +102,6 @@ const installNpmPackage = async (containerName,args) => {
                 if(isExists){
                     const getCacheBool = await client.get(`${npmPackage}_cacheFound`);
                     if(getCacheBool === 'true'){
-                        console.log(`Downloading Libiraries.... from cache`);
                         console.time('npm install offline');
                         const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage} --loglevel=verbose --offline`);
                         console.timeEnd('npm install offline');
@@ -118,7 +110,6 @@ const installNpmPackage = async (containerName,args) => {
                 }
 
                 else {
-                    console.log(`Downloading Libiraries....`);
                     console.time('npm install online');
                     const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage}`);
                     console.time('npm install online');

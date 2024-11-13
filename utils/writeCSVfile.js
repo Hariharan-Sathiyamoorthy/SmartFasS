@@ -4,7 +4,7 @@ import { createObjectCsvWriter } from 'csv-writer';
 async function writeCSVFile(filePath, data) {
   const csvWriter = createObjectCsvWriter({
     path: filePath,
-    header:['startTime', 'endTime', 'executionTime', 'containerName', 'functionName', 'executionType', 'runtime'],
+    header: Object.keys(data[0]),
     append: true // This option enables appending to the file
   });
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="coldMitigation" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Experiment 2" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
@@ -21,7 +21,7 @@
         <boolProp name="recycle">true</boolProp>
         <stringProp name="shareMode">shareMode.all</stringProp>
         <boolProp name="stopThread">false</boolProp>
-        <stringProp name="variableNames">d_t,app,func,end_timestamp,duration,st_tsp,date,counter,wait_delay</stringProp>
+        <stringProp name="variableNames">d_t,app,func,end_timestamp,duration,st_tsp,date,counter,wait</stringProp>
       </CSVDataSet>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -58,7 +58,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/home/hari73118/project/logs/12-11-24-18001.csv</stringProp>
+        <stringProp name="filename">/home/hari73118/project/logs/13-11-24-1311.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
@@ -78,7 +78,7 @@
         <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="${func}" enabled="true">
           <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
           <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
-          <stringProp name="SystemSampler.command">node</stringProp>
+          <stringProp name="SystemSampler.command">/bin/bash</stringProp>
           <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="Argument">
@@ -88,7 +88,7 @@
               </elementProp>
               <elementProp name="" elementType="Argument">
                 <stringProp name="Argument.name"></stringProp>
-                <stringProp name="Argument.value">node main.js function.js orchestrate > ./logs/output_node.log 2>&1 &</stringProp>
+                <stringProp name="Argument.value">node /home/hari73118/project/main.js function.js initiate</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -101,11 +101,11 @@
         <hashTree>
           <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
             <collectionProp name="UserParameters.names">
-              <stringProp name="79219778">START</stringProp>
+              <stringProp name="START">START</stringProp>
             </collectionProp>
             <collectionProp name="UserParameters.thread_values">
               <collectionProp name="943751825">
-                <stringProp name="-811840068">${__time(,)}</stringProp>
+                <stringProp name="811840068">${__time(,)}</stringProp>
               </collectionProp>
             </collectionProp>
             <boolProp name="UserParameters.per_iteration">false</boolProp>
@@ -115,8 +115,10 @@
         <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">${__longSum(2500,${START},-${__time()})}</stringProp>
+          <stringProp name="longSumResult"></stringProp>
+          <stringProp name="ActionProcessor.duration">${__longSum(${wait},${START},-${__time(,)})}</stringProp>
         </TestAction>
+        
         <hashTree/>
       </hashTree>
     </hashTree>

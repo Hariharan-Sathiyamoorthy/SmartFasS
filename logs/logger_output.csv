@@ -1,0 +1,84 @@
+2024-11-13T21:39:14.712Z,coldMitigation_node_c92af09b-3b37-4176-bc54-99d81f15a384,warm,335.36192000000005,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:39:25.844Z,coldMitigation_node_9fff8340-842e-4e6b-a481-48832c588f6a,cold,295.5308350000005,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:39:33.598Z,coldMitigation_node_bd70fc3f-5208-437c-a049-9a20d6574ca3,cold,423.9392740000003,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:39:41.266Z,coldMitigation_node_c38246ff-1bcd-4932-b954-5c3161f9a8de,cold,469.92885900000056,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:39:47.958Z,coldMitigation_node_d17802db-9e1d-436a-b34d-0c3a33bb3c50,cold,412.14256099999966,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:39:55.477Z,coldMitigation_node_983a585b-4ba0-4594-a426-79d78b037e32,cold,269.48918200000026,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:03.171Z,coldMitigation_node_615af53e-e325-4106-ae10-f5cb07601e30,cold,480.3281880000004,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:09.526Z,coldMitigation_node_519af604-4ba3-49ad-97b5-a481e8f3f5a3,cold,359.70689500000026,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:20.827Z,coldMitigation_node_bf918f96-474e-4658-87a4-6fef5b26ff7b,cold,641.4388799999997,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:30.952Z,coldMitigation_node_e715b109-5881-49ef-b8de-86b63b7243cc,cold,508.5565820000011,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:45.931Z,coldMitigation_node_f41a087d-42f0-47c8-a74e-e26e58c3e8d2,cold,235.7913979999994,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:40:47.300Z,coldMitigation_node_e16ad718-1703-4f62-a3a3-f5a4935ce170,warm,324.48343,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:43:44.734Z,coldMitigation_node_0505b5f3-6296-44cd-8a12-cf169567a11f,warm,279.76167699999996,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:43:52.653Z,coldMitigation_node_89971b98-172f-485f-b9a8-b8939d15d88e,cold,599.5843489999997,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:43:58.753Z,coldMitigation_node_1e27ef39-cfe9-4629-936a-487dc388bbb8,cold,352.1659980000004,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:06.179Z,coldMitigation_node_2071b44f-92bd-4b73-a457-4147fc167b1b,cold,272.66262499999993,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:14.379Z,coldMitigation_node_d36595e7-88b9-4521-911f-b3dc078da52d,cold,278.24177099999997,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:21.157Z,coldMitigation_node_8fd38696-2f38-4096-9487-a03c9c22bb12,cold,381.2153189999999,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:27.675Z,coldMitigation_node_e5ce1b9d-ce24-4e76-b581-bc00732ef10c,cold,245.12377399999968,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:35.198Z,coldMitigation_node_40c7d6d3-83ab-4844-b947-e98502b85041,cold,228.8416959999995,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:42.543Z,coldMitigation_node_1c9aa859-7fdb-4d2d-98ad-0a0f0ef553e6,cold,508.3888569999999,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:48.341Z,coldMitigation_node_afbf166e-1a2b-414d-aef2-0ad97102153a,cold,241.19133499999953,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:44:59.099Z,coldMitigation_node_fa3ae9bb-ec0d-4bda-bd13-823db25aecff,cold,381.7106980000008,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:45:01.578Z,coldMitigation_node_044f6eac-9341-42a4-8c44-dcbc39f53689,warm,536.3216459999999,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:45:07.753Z,coldMitigation_node_f79ca361-10d4-4975-8a43-5752faca6ab2,cold,234.17441899999994,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:45:15.556Z,coldMitigation_node_7605c426-4091-470d-8fee-9f0ee856b12b,cold,260.4012270000003,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:45:22.705Z,coldMitigation_node_9355688b-e0cf-4d32-b95e-46f846356289,cold,440.8925389999995,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:49:13.654Z,coldMitigation_node_91cf726d-abc8-4196-9421-fdd461b42e2c,warm,790.9640410000002,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:49:19.698Z,coldMitigation_node_0280f3dd-37fa-4bb7-9f7b-949ff8b8fe95,cold,396.87313300000005,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:50:56.193Z,coldMitigation_node_4202d093-4bf0-4b29-a227-b74e969f8e9f,warm,465.647598,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T21:51:04.247Z,coldMitigation_node_ca01a46f-5d21-47e4-9d8a-0d5b6addfe9c,cold,234.36937300000045,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:54:05.860Z,coldMitigation_node_f000ce2e-609e-4f13-aff4-1d16a14d8ae3,warm,422.74210300000004,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:54:14.168Z,coldMitigation_node_1ed3373f-630e-4d97-a95e-c0262128b33f,cold,237.42529099999956,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:55:15.370Z,coldMitigation_node_b9bdf066-de07-495b-ae16-944528f2f553,warm,564.106082,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:57:42.470Z,coldMitigation_node_4a477327-d492-4a92-bd1c-56b62128dc6d,warm,694.0473700000002,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:57:48.429Z,coldMitigation_node_23e48eca-b3be-4b78-a053-bd4850eece7f,cold,273.72942499999954,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:59:14.169Z,coldMitigation_node_8ec3a98d-9c70-4ad5-908d-993b64d1adcc,warm,706.9530279999999,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T22:59:20.721Z,coldMitigation_node_dc6592c4-0424-4c31-b984-a0ac1c59bded,cold,422.6774829999995,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T23:02:39.695Z,coldMitigation_node_84a76a5b-c99c-4c56-8660-d19bc631bc3d,warm,432.16738999999984,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T23:02:47.032Z,coldMitigation_node_68ae9ff3-38d2-4fcc-a450-c6dec53144ca,cold,241.4936319999997,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T23:19:54.913Z,coldMitigation_node_60dd1926-cb2b-4e74-bd2c-2efa1112bae4,warm,798.8232370000001,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
+2024-11-13T23:20:14.835Z,coldMitigation_node_36fff03b-2a94-46af-b8dd-674025085294,cold,1073.0041379999966,"Serverless Docker, Openwhisk, K8s, nodejs, & cold_start
+"
