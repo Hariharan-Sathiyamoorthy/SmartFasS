@@ -42,9 +42,9 @@ const checkWarmContainer = async (runtime) => {
             executionType = 'cold';
             // create a new container with uuid
             containerName = 'coldMitigation_node_'+ uuidv4();
-
+            console.time('Creating cold container');
             await execPromise(`sudo docker run -e NODE_PATH=/usr/local/lib/node_modules -v /home/hari73118/.npm/:/root/.npm -dit --name ${containerName} node:20-alpine`);
-            console.log('inside cold container');
+            console.timeEnd('Creating cold container');
         }
         return {executionType,containerName};
     } catch (error) {

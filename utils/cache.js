@@ -105,22 +105,24 @@ const installNpmPackage = async (containerName,args) => {
             const { stdout: npmView } = await execPromise
             (`sudo npm view ${npmPackage}`);
             if(npmView && npmView.includes('.integrity:')){
-                const isExists = await client.exists('lodash_cacheFound');
+                const isExists = await client.exists(`${npmPackage}_cacheFound`);
                 if(isExists){
-                    const getCacheBool = await client.get('lodash_cacheFound');
+                    const getCacheBool = await client.get(`${npmPackage}_cacheFound`);
                     if(getCacheBool === 'true'){
                         console.log(`Downloading Libiraries.... from cache`);
+                        console.time('npm install offline');
                         const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage} --loglevel=verbose --offline`);
-                        console.log(stdout);
+                        console.timeEnd('npm install offline');
                     }
                     
                 }
 
                 else {
                     console.log(`Downloading Libiraries....`);
-
+                    console.time('npm install online');
                     const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage}`);
-                    console.log(stdout);
+                    console.time('npm install online');
+
                 }
             }
             await storeCacheInRedis(npmPackage,'Time')

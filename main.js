@@ -19,7 +19,10 @@ class Main {
     async initiator() {
         try {
             const { executionType, containerName } = await checkWarmContainer('node');
-            const exec = await executeContainer(containerName, this.args);
+            if(executionType === 'cold') {
+                const msg = await installNpmPackage(containerName, this.args);
+            }
+            const exec = await executeContainer(containerName, this.args,executionType);
         } catch (error) {
             console.error('Error in initiator:', error);
             process.exit(1);
@@ -28,14 +31,20 @@ class Main {
     async orchestrator() {
         try {
             const data = await readCSVFile('/home/hari73118/project/dataset/gru_wait_delay.csv');
+            let count = 0;
             for (const row of data) {
-                console.log('row:', row.wait);
-                const runtime = await getRuntime(this.args);
-                const { executionType, containerName } = await checkWarmContainer(runtime);
-                console.log('executionType:', executionType);
-                this.containerName = containerName;
-                const msg = await installNpmPackage(containerName, this.args);
-                await this.sleep(parseInt(row.wait));
+                console.log('row:', row.wait_delay);
+                if(count <= 25) {
+                    const runtime = await getRuntime(this.args);
+                    const { executionType, containerName } = await checkWarmContainer(runtime);
+                    console.log('executionType:', executionType);
+                    this.containerName = containerName;
+                    const msg = await installNpmPackage(containerName, this.args);
+                    await this.sleep(parseInt(row.wait_delay));
+                }else {
+                    break;
+                }
+                count++;
             };
         } catch (error) {
             console.error('Error reading CSV file:', error);
