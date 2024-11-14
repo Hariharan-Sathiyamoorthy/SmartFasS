@@ -11,13 +11,13 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="filename">/home/hari73118/project/dataset/2021-02-04_AzureDataset.csv</stringProp>
+        <stringProp name="filename">/home/hari73118/project/dataset/ML_AzureDataset.csv</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
         <stringProp name="shareMode">shareMode.all</stringProp>
         <boolProp name="stopThread">false</boolProp>
-        <stringProp name="variableNames">datetime,app,func,end_timestamp,duration,start_timestamp,date,counter,wait</stringProp>
+        <stringProp name="variableNames">sno,func,wait,counter</stringProp>
       </CSVDataSet>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
