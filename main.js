@@ -19,7 +19,6 @@ class Main {
     }
     async initiator() {
         try {
-
                 const { executionType, containerName } = await checkWarmContainer('node');
                 if(executionType === 'cold') {
                     const msg = await installNpmPackage(containerName, this.args);
@@ -44,7 +43,7 @@ class Main {
             const data = await readCSVFile('/home/hari73118/project/dataset/gru_wait_delay.csv');
             let count = 0;
             for (const row of data) {
-                if(count <= 5) {
+                if(count <= 20) {
                     console.log('Starting Orchetration');
 
                     const runtime = await getRuntime(this.args);

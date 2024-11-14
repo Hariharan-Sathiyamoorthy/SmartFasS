@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "orchestrate": "node main.js function.js orchestrate",
     "initiate": "node main.js function.js initiate",
-    "coldMitigation": "node main.js function.js orchestrate > ./logs/output_node.log 2>&1 & jmeter -n -t \"./jmeter/loadScript.jmx\" -l \"./logs/12-11-24-2109.csv\" > ./logs/output_jmeter.log 2>&1 &",
+    "coldMitigation": "node main.js function.js orchestrate > ./logs/output_node.log 2>&1 & jmeter -n -t \"./jmeter/loadScript2.jmx\" -l \"./logs/12-11-24-2109.csv\" > ./logs/output_jmeter.log 2>&1 &",
     "jmeter": "jmeter -n -t \"./jmeter/loadScript.jmx\" -l \"./logs/12-11-24-1911.csv\" > ./logs/output_jmeter.log 2>&1 &"
   },
   "author": "",
