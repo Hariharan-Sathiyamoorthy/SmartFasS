@@ -14,7 +14,8 @@ const getRuntime = async (args) => {
         })
         .catch(() => {
             console.log('File not found');
-            process.exit(1);
+            // process.exit(1);
+            return;
         });
 }
 

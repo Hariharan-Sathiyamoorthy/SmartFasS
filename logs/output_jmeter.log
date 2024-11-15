@@ -5,12 +5,21 @@ WARN StatusConsoleListener The use of package scanning to locate plugins is depr
 Warning: Nashorn engine is planned to be removed from a future JDK release
 Creating summariser <summary>
 Created the tree successfully using ./jmeter/loadScript2.jmx
-Starting standalone test @ 2024 Nov 14 13:03:04 UTC (1731589384822)
+Starting standalone test @ 2024 Nov 15 11:45:05 UTC (1731671105690)
 Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
 Warning: Nashorn engine is planned to be removed from a future JDK release
-summary +      4 in 00:00:28 =    0.1/s Avg:  6043 Min:  2711 Max:  7672 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
-summary +      6 in 00:00:58 =    0.1/s Avg:  5070 Min:  1302 Max:  7752 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
-summary =     10 in 00:01:26 =    0.1/s Avg:  5459 Min:  1302 Max:  7752 Err:     0 (0.00%)
-summary =     10 in 00:01:26 =    0.1/s Avg:  5459 Min:  1302 Max:  7752 Err:     0 (0.00%)
-Tidying up ...    @ 2024 Nov 14 13:04:31 UTC (1731589471729)
-... end of run
+summary +      4 in 00:00:28 =    0.1/s Avg:  5877 Min:  2689 Max:  7907 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +      1 in 00:00:31 =    0.0/s Avg:  1281 Min:  1281 Max:  1281 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =      5 in 00:00:58 =    0.1/s Avg:  4958 Min:  1281 Max:  7907 Err:     0 (0.00%)
+summary +     10 in 00:09:28 =    0.0/s Avg:  2581 Min:  1223 Max: 10281 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     15 in 00:10:26 =    0.0/s Avg:  3373 Min:  1223 Max: 10281 Err:     0 (0.00%)
+summary +      5 in 00:03:29 =    0.0/s Avg:  2779 Min:  1264 Max:  6959 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     20 in 00:13:55 =    0.0/s Avg:  3224 Min:  1223 Max: 10281 Err:     0 (0.00%)
+summary +      5 in 00:03:33 =    0.0/s Avg:  2723 Min:  1372 Max:  6520 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     25 in 00:17:27 =    0.0/s Avg:  3124 Min:  1223 Max: 10281 Err:     0 (0.00%)
+summary +      4 in 00:01:01 =    0.1/s Avg:  1622 Min:  1360 Max:  1908 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     29 in 00:18:28 =    0.0/s Avg:  2917 Min:  1223 Max: 10281 Err:     0 (0.00%)
+summary +      4 in 00:01:57 =    0.0/s Avg:  4194 Min:  2058 Max: 10116 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     33 in 00:20:25 =    0.0/s Avg:  3072 Min:  1223 Max: 10281 Err:     0 (0.00%)
+summary +      7 in 00:01:01 =    0.1/s Avg:  3538 Min:  1628 Max: 11749 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary =     40 in 00:21:26 =    0.0/s Avg:  3153 Min:  1223 Max: 11749 Err:     0 (0.00%)

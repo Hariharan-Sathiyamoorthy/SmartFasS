@@ -19,6 +19,7 @@ const args = process.argv.slice(2);
 class Main {
     constructor(args) {
         this.args = args;
+        this.today = new Date(Date.now());
     }
     async sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -43,10 +44,9 @@ class Main {
                 time: new Date().toISOString(),
                 containerName,
                 executionType,
-                executionTime,
-                execOutput,
+                executionTime
             }]
-            await writeCSVFile('/home/hari73118/project/logs/logger_output.csv', data);
+            await writeCSVFile(`/home/hari73118/project/logs/results/IntiatorOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
 
         } catch (error) {
             console.error('Error in initiator:', error);
@@ -66,7 +66,9 @@ class Main {
     async orchestrator() {
         try {
             const data = await readCSVFile('/home/hari73118/project/dataset/ML_Delays.csv');
+            // let count = 0;
             for (const row of data) {
+                // if (count <= 23) {
                 console.log('Starting Orchetration');
                 const runtime = await getRuntime(this.args);
                 const { executionType, containerName } = await checkWarmContainer(runtime);
@@ -76,6 +78,10 @@ class Main {
                 console.log('Orchetration Complete:', containerName, executionType);
                 console.log('sleeping for:', parseInt(row.wait));
                 await this.sleep(parseInt(row.wait));
+                // }else{
+                //     break;
+                // }
+                // count++;
             };
         } catch (error) {
             console.error('Error reading CSV file:', error);

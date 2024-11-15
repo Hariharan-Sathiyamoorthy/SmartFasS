@@ -20,7 +20,8 @@ const executeContainer = async (containerName, args,executionType) => {
         return {execOutput,executionTime:endTime - startTime};
     } catch (error) {
         console.error(error);
-        process.exit(1);
+        // process.exit(1);
+        return;
     }
 }
 

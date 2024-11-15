@@ -26,7 +26,7 @@ const executeOpenwhisk = async (args) => {
 
         } catch (error) {   
             console.error(error);
-            process.exit(1);
+            return;
         }
 
 }

@@ -1,72 +1,700 @@
 Starting Orchetration
-Creating cold container: 1.303s
-npm install offline: 5.520s
-Orchetration Complete: coldMitigation_node_f08f5405-b643-47f2-a8e3-69118190fc62 cold
+Creating cold container: 1.624s
+npm install offline: 5.471s
+Orchetration Complete: coldMitigation_node_057885da-69d3-4305-89be-285e3cdda06d cold
 sleeping for: 7809
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_9d626488-6fbe-45e9-a21a-5e548ca6765e warm
+Orchetration Complete: coldMitigation_node_5897d7b4-a680-455f-a63e-9f314bfe9690 warm
 sleeping for: 8048
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_bde9d968-d9ae-4354-b149-0fd434857d4a warm
+Orchetration Complete: coldMitigation_node_93a15a92-2a75-474b-b248-9722a0138300 warm
 sleeping for: 3956
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_770d746c-b71f-4bff-962f-99d7f532b69e warm
+Orchetration Complete: coldMitigation_node_4951d778-d9ba-4a25-9583-1ea38bb14c08 warm
 sleeping for: 7469
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_72c79ae5-1e05-4335-a65d-4aa122d569e5 warm
+Creating cold container: 473.763ms
+npm install offline: 3.343s
+Orchetration Complete: coldMitigation_node_7039c03f-eec5-4fce-ab4f-116487ebabb6 cold
 sleeping for: 7483
 Starting Orchetration
-Creating cold container: 499.991ms
-npm install offline: 2.217s
-Orchetration Complete: coldMitigation_node_d8265d0c-c091-47b2-ad65-9b43ea965332 cold
+Orchetration Complete: coldMitigation_node_7039c03f-eec5-4fce-ab4f-116487ebabb6 warm
 sleeping for: 8187
 Starting Orchetration
-Creating cold container: 660.64ms
-npm install offline: 2.909s
-Orchetration Complete: coldMitigation_node_8b82003b-0855-4344-9fd3-8ee5fe5ebd47 cold
+Orchetration Complete: coldMitigation_node_7039c03f-eec5-4fce-ab4f-116487ebabb6 warm
 sleeping for: 8306
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_6739458d-066b-4c42-baaf-f6ee4b2b6bea warm
+Creating cold container: 572.045ms
+npm install offline: 4.344s
+Orchetration Complete: coldMitigation_node_04c7db4d-3c1f-4b2c-af20-b5890e25e713 cold
 sleeping for: 7551
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_dfd96a81-b8f2-43ab-b7fd-fe3d33ae20a2 warm
+Creating cold container: 544.974ms
+npm install offline: 1.889s
+Orchetration Complete: coldMitigation_node_57eb4944-dc9f-4edb-84a4-7ccc86e39692 cold
 sleeping for: 7359
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_ee2b7699-86b2-45fb-869c-6b1c3214a7a0 warm
+Orchetration Complete: coldMitigation_node_57eb4944-dc9f-4edb-84a4-7ccc86e39692 warm
 sleeping for: 7552
 Starting Orchetration
-Creating cold container: 532.655ms
-npm install offline: 2.839s
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 cold
+Orchetration Complete: coldMitigation_node_57eb4944-dc9f-4edb-84a4-7ccc86e39692 warm
 sleeping for: 7600
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_57eb4944-dc9f-4edb-84a4-7ccc86e39692 warm
 sleeping for: 7247
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Creating cold container: 591.461ms
+npm install offline: 3.134s
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c cold
 sleeping for: 6747
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 7633
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 7976
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 8229
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 8769
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 8254
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 8309
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Orchetration Complete: coldMitigation_node_34e3c452-2b92-4df9-bbd8-ca2323d2c87c warm
 sleeping for: 8062
 Starting Orchetration
-Orchetration Complete: coldMitigation_node_7ca344ae-596f-4db8-955c-3a3a59b11719 warm
+Creating cold container: 660.956ms
+npm install offline: 2.586s
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f cold
 sleeping for: 2051
-End of Run
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 6488
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 7100
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 3407
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 5264
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 5868
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 7499
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_12591224-3472-4a02-898f-7426e1c91e2f warm
+sleeping for: 7386
+Starting Orchetration
+Creating cold container: 836.128ms
+npm install offline: 1.681s
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d cold
+sleeping for: 7047
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7065
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7724
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 8378
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 8094
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 2178
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 6627
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7124
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7746
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7833
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 5457
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7278
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 7612
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 8083
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 8446
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_05bd18e6-69cf-4900-85f0-d3826156fc1d warm
+sleeping for: 8221
+Starting Orchetration
+Creating cold container: 838.38ms
+npm install offline: 3.522s
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 cold
+sleeping for: 2714
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 6283
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 4239
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 7113
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 7100
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 4635
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 6725
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 5198
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 6109
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 7272
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 8021
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 1719
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 7050
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 7368
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 8128
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_7081a81e-948a-4d10-8da7-e7ea4db6fc15 warm
+sleeping for: 8506
+Starting Orchetration
+Creating cold container: 822.671ms
+npm install offline: 1.697s
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d cold
+sleeping for: 7654
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 8091
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 8025
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7530
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7677
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7583
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7059
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7903
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 8246
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 8216
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_be916a74-dc06-4e2b-b36c-ae968d90570d warm
+sleeping for: 7543
+Starting Orchetration
+Creating cold container: 477.264ms
+npm install offline: 1.738s
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 cold
+sleeping for: 7143
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 6803
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2559
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 3631
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 1914
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 3396
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 1961
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2123
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2148
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2142
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2849
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 1853
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2129
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2173
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2809
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2899
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2157
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2197
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2191
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2137
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2884
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_b24b185a-492d-495c-8df2-b404b341a4d1 warm
+sleeping for: 2122
+Starting Orchetration
+Creating cold container: 554.461ms
+npm install offline: 1.863s
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 cold
+sleeping for: 2149
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 2351
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 2099
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 2089
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 3269
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 2157
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 2163
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a05949c0-bd12-4320-9595-8a0f136eff81 warm
+sleeping for: 3206
+Starting Orchetration
+Creating cold container: 576.818ms
+npm install offline: 3.315s
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 cold
+sleeping for: 2325
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2141
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2232
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2275
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2072
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2101
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2412
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2223
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2266
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2162
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2162
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 4845
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 2713
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_8afd9271-128b-4a3a-9422-c60367902d75 warm
+sleeping for: 3027
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_bd1f1d60-a2ef-49a4-b386-bb62ed34d133 warm
+sleeping for: 3642
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_bd1f1d60-a2ef-49a4-b386-bb62ed34d133 warm
+sleeping for: 1970
+Starting Orchetration
+Creating cold container: 454.002ms
+npm install offline: 3.388s
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b cold
+sleeping for: 3440
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2444
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3069
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 4227
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2806
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3177
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2857
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2159
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3228
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 1989
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2152
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3415
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2416
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3100
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 1698
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2284
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2211
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3782
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3188
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 1758
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 3245
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 1910
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_af8dd4b7-eecd-411e-8106-0ba856417d6b warm
+sleeping for: 2727
+Starting Orchetration
+Creating cold container: 645.479ms
+npm install offline: 2.002s
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 cold
+sleeping for: 1879
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2140
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2121
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2189
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2142
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2161
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2269
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2195
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2380
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2931
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 6090
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 3017
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 5815
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 2418
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 5315
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 3728
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4e9ee94a-9a6f-4d72-b8af-11f89845adc9 warm
+sleeping for: 5398
+Starting Orchetration
+Creating cold container: 456.505ms
+npm install offline: 1.962s
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f cold
+sleeping for: 1491
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 3265
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 2245
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 5803
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 1505
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 4994
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 6884
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 7539
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 7411
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 2782
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 6866
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 7361
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 8096
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 7795
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_849fc9b5-0bf7-436d-8d5d-a23289fd836f warm
+sleeping for: 8009
+Starting Orchetration
+Creating cold container: 1.215s
+npm install offline: 2.233s
+Orchetration Complete: coldMitigation_node_caaa902a-f83c-490b-9c52-5a74da18233b cold
+sleeping for: 7551
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_caaa902a-f83c-490b-9c52-5a74da18233b warm
+sleeping for: 7390
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_caaa902a-f83c-490b-9c52-5a74da18233b warm
+sleeping for: 8098
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_caaa902a-f83c-490b-9c52-5a74da18233b warm
+sleeping for: 8026
+Starting Orchetration
+Creating cold container: 804.458ms
+npm install offline: 2.959s
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb cold
+sleeping for: 8051
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 8075
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 7548
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 5609
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 6887
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 7110
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 7906
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_55b7c41f-c64c-4180-865e-58f7028facdb warm
+sleeping for: 8025
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_a37fe5df-27ef-47e7-b785-af87ca450d9e warm
+sleeping for: 7103
+Starting Orchetration
+Creating cold container: 481.353ms
+npm install offline: 1.691s
+Orchetration Complete: coldMitigation_node_f3010e30-12db-4bf6-8670-48ec9db01c46 cold
+sleeping for: 6880
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_f3010e30-12db-4bf6-8670-48ec9db01c46 warm
+sleeping for: 7636
+Starting Orchetration
+Creating cold container: 704.234ms
+npm install offline: 1.651s
+Orchetration Complete: coldMitigation_node_e9e95f31-69c7-4c6c-8efb-696f24c8a44c cold
+sleeping for: 8120
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_e9e95f31-69c7-4c6c-8efb-696f24c8a44c warm
+sleeping for: 7270
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_e9e95f31-69c7-4c6c-8efb-696f24c8a44c warm
+sleeping for: 6609
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_e9e95f31-69c7-4c6c-8efb-696f24c8a44c warm
+sleeping for: 7362
+Starting Orchetration
+Creating cold container: 445.014ms
+npm install offline: 3.791s
+Orchetration Complete: coldMitigation_node_aa4a8aa8-0307-4ee6-99dc-2160114bf169 cold
+sleeping for: 7963
+Starting Orchetration
+Creating cold container: 753.145ms
+npm install offline: 2.912s
+Orchetration Complete: coldMitigation_node_9e471416-1dbe-4170-b484-997c608198f0 cold
+sleeping for: 8066
+Starting Orchetration
+Creating cold container: 472.521ms
+npm install offline: 1.703s
+Orchetration Complete: coldMitigation_node_de665cc8-be59-4013-84d7-2a4e7b5b363e cold
+sleeping for: 8693
+Starting Orchetration
+Creating cold container: 484.571ms
+npm install offline: 3.191s
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 cold
+sleeping for: 8272
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 7752
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 1481
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 5470
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 6722
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 6802
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 7866
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 7587
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 8200
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 7376
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 7127
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_41bb312d-4932-485c-ae23-931685339706 warm
+sleeping for: 1672
+Starting Orchetration
+Creating cold container: 1.342s
+npm install offline: 3.264s
+Orchetration Complete: coldMitigation_node_1c53cda0-14ad-4676-81be-c34844b1f8f3 cold
+sleeping for: 4314
+Starting Orchetration
+Creating cold container: 518.46ms
+npm install offline: 1.750s
+Orchetration Complete: coldMitigation_node_dbbbd3fa-dfd9-454e-9530-2b42d153a8c9 cold
+sleeping for: 6231
+Starting Orchetration
+Creating cold container: 542.113ms
+npm install offline: 1.720s
+Orchetration Complete: coldMitigation_node_624d622f-9ead-4cf4-9d30-0ecb60f96058 cold
+sleeping for: 7678
+Starting Orchetration
+Creating cold container: 461.889ms
+npm install offline: 3.209s
+Orchetration Complete: coldMitigation_node_4beae6fe-e5f5-4003-9dd3-82634008ec24 cold
+sleeping for: 7434
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_4beae6fe-e5f5-4003-9dd3-82634008ec24 warm
+sleeping for: 8302
+Starting Orchetration
+Creating cold container: 1.089s
+npm install offline: 4.644s
+Orchetration Complete: coldMitigation_node_b49c85a1-edab-4ee2-b8a1-12a3d4940844 cold
+sleeping for: 7742
+Starting Orchetration
+Creating cold container: 997.71ms
+npm install offline: 3.175s
+Orchetration Complete: coldMitigation_node_6611589d-1761-4fd4-ab29-39f8c1a49c0e cold
+sleeping for: 7703
+Starting Orchetration
+Orchetration Complete: coldMitigation_node_6611589d-1761-4fd4-ab29-39f8c1a49c0e warm
+sleeping for: 6085

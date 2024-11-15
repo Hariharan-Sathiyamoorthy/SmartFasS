@@ -82,7 +82,8 @@ const storeCacheInRedis = async (npmPackage,time) => {
 
     }catch(err){
         console.error(err);
-        process.exit(1);    
+        // process.exit(1);    
+        return;
     }
     
 
@@ -121,7 +122,8 @@ const installNpmPackage = async (containerName,args) => {
         return 'success';
     } catch (error) {
         console.error(error);
-        process.exit(1);
+        // process.exit(1);
+        return;
     }finally {
         await client.disconnect();
     }
