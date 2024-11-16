@@ -27,8 +27,8 @@ const checkWarmContainer = async (runtime) => {
         return {executionType,containerName};
     } catch (error) {
         console.error(error);
-        await createColdContainer();
-        return;
+        const containerName = await createColdContainer();
+        return {executionType:'cold',containerName};
     }
 }
 
