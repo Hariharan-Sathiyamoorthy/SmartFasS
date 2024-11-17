@@ -54,7 +54,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/home/hari73118/project/logs/results/OpenWhisk_Jmeter_15-11-24.csv</stringProp>
+        <stringProp name="filename">/home/hari73118/project/logs/results/OpenWhisk_Jmeter_17-11-24.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
