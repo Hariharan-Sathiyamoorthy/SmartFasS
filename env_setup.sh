@@ -21,11 +21,8 @@ ERRORFILE="error.log"
     curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo wget https://downloads.apache.org/jmeter/binaries/apache-jmeter-5.6.3.zip
-    mkdir jmeter
     sudo apt-get install -y unzip
     sudo unzip apache-jmeter-5.6.3.zip
-    sudo mv apache-jmeter-5.6.3/* jmeter
-    sudo mv jmeter /usr/local/bin/jmeter
     echo 'export JMETER_HOME=/usr/local/bin/jmeter' >> ~/.bashrc
     echo 'export PATH=$JMETER_HOME/bin:$PATH' >> ~/.bashrc
     source ~/.bashrc

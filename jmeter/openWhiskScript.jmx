@@ -81,7 +81,7 @@
               </elementProp>
               <elementProp name="" elementType="Argument">
                 <stringProp name="Argument.name"></stringProp>
-                <stringProp name="Argument.value">sudo wsk -i action invoke --result ${func}</stringProp>
+                <stringProp name="Argument.value">node /home/hari73118/project/main.js function.js openwhisk ${func}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
