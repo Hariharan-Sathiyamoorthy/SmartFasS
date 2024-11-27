@@ -67,9 +67,9 @@ class Main {
     async orchestrator() {
         try {
             const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays.csv`);
-            // let count = 0;
+            let count = 0;
             for (const row of data) {
-                // if (count <= 23) {
+                if (count <= 412) {
                 console.log('Starting Orchetration');
                 const runtime = await getRuntime(this.args);
                 const { executionType, containerName } = await checkWarmContainer(runtime,homeDir);
@@ -79,10 +79,10 @@ class Main {
                 console.log('Orchetration Complete:', containerName, executionType);
                 console.log('sleeping for:', parseInt(row.wait));
                 await this.sleep(parseInt(row.wait));
-                // }else{
-                //     break;
-                // }
-                // count++;
+                }else{
+                    break;
+                }
+                count++;
             };
         } catch (error) {
             console.error('Error reading CSV file:', error);
