@@ -9,7 +9,7 @@ import createColdContainer from './createColdConatiner.js';
 
 const execPromise = util.promisify(exec);
 
-const checkWarmContainer = async (runtime) => {
+const checkWarmContainer = async (runtim,homeDir) => {
     try {
         let executionType, totalCount, containerName;
         const { stdout: warmContainerCountStdout } = await execPromise(`sudo docker ps --format '{{.Names}}' | grep coldMitigation_${runtime} | wc -l`);
@@ -22,12 +22,12 @@ const checkWarmContainer = async (runtime) => {
             containerName = sortedContainers[0];
         } else {
             executionType = 'cold';
-            containerName = await createColdContainer();
+            containerName = await createColdContainer(homeDir);
         }
         return {executionType,containerName};
     } catch (error) {
         console.error(error);
-        const containerName = await createColdContainer();
+        const containerName = await createColdContainer(homeDir);
         return {executionType:'cold',containerName};
     }
 }

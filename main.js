@@ -1,3 +1,4 @@
+import os from 'os';
 import getRuntime from './utils/getRuntime.js';
 import checkWarmContainer from './utils/checkWarmContainer.js';
 import installNpmPackage from './utils/cache.js';
@@ -11,7 +12,7 @@ import executeOpenwhisk from './utils/executeOpenwhisk.js';
  * Error handling pending
  * code cleanse
  */
-
+const homeDir = os.homedir();
 const args = process.argv.slice(2);
 
 
@@ -35,18 +36,18 @@ class Main {
  */
     async initiator() {
         try {
-            const { executionType, containerName } = await checkWarmContainer('node');
+            const { executionType, containerName } = await checkWarmContainer('node',homeDir);
             if (executionType === 'cold') {
-                const msg = await installNpmPackage(containerName, this.args);
+                const msg = await installNpmPackage(containerName, this.args,homeDir);
             }
-            const { execOutput, killOutput, removeOutput, executionTime } = await executeContainer(containerName, this.args, executionType);
+            const { execOutput, killOutput, removeOutput, executionTime } = await executeContainer(containerName, this.args, executionType,homeDir);
             const data = [{
                 time: new Date().toISOString(),
                 containerName,
                 executionType,
                 executionTime
             }]
-            await writeCSVFile(`/home/hari73118/project/logs/results/IntiatorOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
+            await writeCSVFile(`${homeDir}/project/logs/results/IntiatorOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
 
         } catch (error) {
             console.error('Error in initiator:', error);
@@ -65,15 +66,15 @@ class Main {
      */
     async orchestrator() {
         try {
-            const data = await readCSVFile('/home/hari73118/project/dataset/ML_Delays.csv');
+            const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays.csv`);
             // let count = 0;
             for (const row of data) {
                 // if (count <= 23) {
                 console.log('Starting Orchetration');
                 const runtime = await getRuntime(this.args);
-                const { executionType, containerName } = await checkWarmContainer(runtime);
+                const { executionType, containerName } = await checkWarmContainer(runtime,homeDir);
                 if (executionType === 'cold') {
-                    const msg = await installNpmPackage(containerName, this.args);
+                    const msg = await installNpmPackage(containerName, this.args,homeDir);
                 }
                 console.log('Orchetration Complete:', containerName, executionType);
                 console.log('sleeping for:', parseInt(row.wait));
@@ -98,7 +99,7 @@ class Main {
      */
     async openWhisk() {
         try {
-            const executionTime = await executeOpenwhisk(this.args);
+            const executionTime = await executeOpenwhisk(this.args,homeDir);
         } catch (error) {
             console.error('Error in openWhisk:', error);
             process.exit(1);

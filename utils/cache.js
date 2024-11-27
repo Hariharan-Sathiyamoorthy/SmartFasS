@@ -17,13 +17,13 @@ const client = createClient();
  * @param {*} time 
  */
 
-const storeCacheInRedis = async (npmPackage,time) => {
+const storeCacheInRedis = async (npmPackage,time,homeDir) => {
     let lib_frequency = npmPackage+'_freq'
     let lib_count = npmPackage+'_count'
     let lib_last_used = npmPackage+'_last_used'
     let lib_install_time = npmPackage+'_install_time'
     let lib_cacheFound = npmPackage+'_cacheFound'
-    let cacheDir = '/home/hari73118/.npm/'
+    let cacheDir = `${homeDir}/.npm/`
     try {
 
         if(fs.existsSync(cacheDir)){
@@ -90,10 +90,10 @@ const storeCacheInRedis = async (npmPackage,time) => {
 
 }
 
-const installNpmPackage = async (containerName,args) => {
+const installNpmPackage = async (containerName,args,homeDir) => {
     try {
         await client.connect();
-        const { stdout: getPackageName } = await execPromise(`cat /home/hari73118/project/${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
+        const { stdout: getPackageName } = await execPromise(`cat ${homeDir}/project/${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
         let npmPackages = getPackageName.split('\n').filter(n => n);
         await Promise.all(npmPackages.map(async (npmPackage) => {
             const { stdout: npmView } = await execPromise
@@ -117,7 +117,7 @@ const installNpmPackage = async (containerName,args) => {
 
                 }
             }
-            await storeCacheInRedis(npmPackage,'Time')
+            await storeCacheInRedis(npmPackage,'Time',homeDir)
         }));
         return 'success';
     } catch (error) {

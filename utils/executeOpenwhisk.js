@@ -10,11 +10,11 @@ import { performance } from 'perf_hooks';
 
 const execPromise = util.promisify(exec);
 
-const executeOpenwhisk = async (args) => {
+const executeOpenwhisk = async (args,homeDir) => {
         try {
             console.log('Creating Openwhisk Action...');
             const startTime = performance.now();
-            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create simpleAction --kind nodejs:default /home/hari73118/project/${args[0]} `);
+            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create simpleAction --kind nodejs:default ${homeDir}/project/${args[0]} `);
             console.log('Invoking Openwhisk Action...');
             const {stdout: invokeStdout} = await execPromise(`sudo wsk -i action invoke simpleAction --blocking`);
             const endTime = performance.now();
