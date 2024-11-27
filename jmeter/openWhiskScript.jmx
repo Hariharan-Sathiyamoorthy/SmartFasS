@@ -89,7 +89,7 @@
           <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="SystemSampler.directory">/usr/local/bin/apache-jmeter/bin</stringProp>
+          <stringProp name="SystemSampler.directory">/usr/local/bin/jmeter/bin</stringProp>
         </SystemSampler>
         <hashTree>
           <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters">
