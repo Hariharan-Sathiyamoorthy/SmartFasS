@@ -9,7 +9,7 @@ import createColdContainer from './createColdConatiner.js';
 
 const execPromise = util.promisify(exec);
 
-const checkWarmContainer = async (runtim,homeDir) => {
+const checkWarmContainer = async (runtime,homeDir) => {
     try {
         let executionType, totalCount, containerName;
         const { stdout: warmContainerCountStdout } = await execPromise(`sudo docker ps --format '{{.Names}}' | grep coldMitigation_${runtime} | wc -l`);
