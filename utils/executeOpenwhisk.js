@@ -14,14 +14,14 @@ const executeOpenwhisk = async (args,homeDir) => {
         try {
             console.log('Creating Openwhisk Action...');
             const startTime = performance.now();
-            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create simpleAction --kind nodejs:default ${homeDir}/project/${args[0]} `);
+            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create ${args[2]} --kind nodejs:default ${homeDir}/project/${args[0]} `);
             console.log('Invoking Openwhisk Action...');
-            const {stdout: invokeStdout} = await execPromise(`sudo wsk -i action invoke simpleAction --blocking`);
+            const {stdout: invokeStdout} = await execPromise(`sudo wsk -i action invoke ${args[2]} --blocking`);
             const endTime = performance.now();
             console.log('Deleting Openwhisk Action...');
-            const {stdout: deleteStdout} = await execPromise(`sudo wsk -i action delete simpleAction`);
+            const {stdout: deleteStdout} = await execPromise(`sudo wsk -i action delete ${args[2]}`);
             console.log('Total Execution time is',endTime - startTime);
-            return endTime - startTime;
+            return {executionTime:endTime - startTime,func:args[2]};
 
 
         } catch (error) {   

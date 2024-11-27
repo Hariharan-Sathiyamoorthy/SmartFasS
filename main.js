@@ -99,7 +99,13 @@ class Main {
      */
     async openWhisk() {
         try {
-            const executionTime = await executeOpenwhisk(this.args,homeDir);
+            const {executionTime,func} = await executeOpenwhisk(this.args,homeDir);
+            const data = [{
+                time: new Date().toISOString(),
+                func,
+                executionTime
+            }]
+            await writeCSVFile(`${homeDir}/project/logs/results/OpenWhiskOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
         } catch (error) {
             console.error('Error in openWhisk:', error);
             process.exit(1);
