@@ -47,7 +47,7 @@ class Main {
                 executionType,
                 executionTime
             }]
-            await writeCSVFile(`${homeDir}/project/logs/results/IntiatorOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
+            await writeCSVFile(`${homeDir}/project/logs/results/IntiatorOutput2_${this.today.toISOString().slice(0,10)}.csv`, data);
 
         } catch (error) {
             console.error('Error in initiator:', error);
@@ -66,7 +66,7 @@ class Main {
      */
     async orchestrator() {
         try {
-            const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays.csv`);
+            const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays2.csv`);
             let count = 0;
             for (const row of data) {
                 if (count <= 412) {
