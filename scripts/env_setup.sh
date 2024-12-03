@@ -90,7 +90,7 @@ if [ "$choice" -eq 1 ] || [ "$choice" -eq 2 ]; then
             sudo apt-get update
 
             echo "Installing Redis..." 
-            sudo apt-get install redis
+            sudo apt-get install -y redis
 
             echo "SmartFasS environment setup process completed successfully." 
         fi
