@@ -4,7 +4,6 @@
   "description": "",
   "main": "function.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "orchestrate": "node main.js function.js orchestrate",
     "initiate": "node main.js function.js initiate",
     "coldMitigation": "nohup node main.js function.js orchestrate > ./logs/output_node.log 2>&1 & jmeter -n -t \"./jmeter/loadScript2.jmx\" > ./logs/output_jmeter.log 2>&1 &",
