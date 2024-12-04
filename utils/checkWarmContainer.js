@@ -4,7 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import createColdContainer from './createColdConatiner.js';
 
 /**
- * handle in use conatiners
+ * Check if the container is warm or cold
+ * @param {String} runtime - Name of the runtime
+ * @param {String} homeDir - Home directory
+ * @returns {Object} - Execution type and container name
  */
 
 const execPromise = util.promisify(exec);

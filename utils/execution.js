@@ -2,6 +2,16 @@ import { exec } from 'child_process';
 import util from 'util';
 import { performance } from 'perf_hooks';
 import writeCSVFile from './writeCSVfile.js';
+
+/**
+ * Execute the container
+ * @param {String} containerName - Name of the container
+ * @param {Array} args - Arguments
+ * @param {String} executionType - Execution type
+ * @param {String} homeDir - Home directory
+ * @returns {Object} - Execution output and execution time
+*/
+
 const execPromise = util.promisify(exec);
 const executeContainer = async (containerName, args,executionType,homeDir) => {
     console.log(args);

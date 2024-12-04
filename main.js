@@ -7,14 +7,19 @@ import readCSVFile from './utils/readCSVfile.js';
 import writeCSVFile from './utils/writeCSVfile.js';
 import executeOpenwhisk from './utils/executeOpenwhisk.js';
 
-/**
- * 
- * Error handling pending
- * code cleanse
- */
+
 const homeDir = os.homedir();
 const args = process.argv.slice(2);
 
+/**
+ * Main class
+ * @class
+ * @param {Array} args - Command line arguments
+ * @param {Function} sleep - Function to sleep for a given time
+ * @param {Function} initiator - Function to execute the node app inside Docker containers 
+ * @param {Function} orchestrator - Function to orchestrate Docker containers
+ * @param {Function} openWhisk - Function to execute openwhisk with Jmeter
+ */
 
 
 class Main {
@@ -25,15 +30,7 @@ class Main {
     async sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-    /**
- * Initiates the process by checking for a warm container, installing necessary npm packages if the container is cold,
- * executing the container, and logging the execution details to a CSV file.
- *
- * @async
- * @function initiator
- * @param {Object} this.args - The arguments to be passed to the container.
- * @returns {Promise<void>} - A promise that resolves when the process is complete.
- */
+
     async initiator() {
         try {
             const { executionType, containerName } = await checkWarmContainer('node',homeDir);
@@ -54,16 +51,7 @@ class Main {
             process.exit(1);
         }
     }
-    /**
-     * Orchestrates the process by reading data from a CSV file, checking for a warm container,
-     * installing necessary npm packages if the container is cold, and executing the container.
-     * The process is repeated for a specified number of times with delays between each execution.
-     *
-     * @async
-     * @function orchestrator
-     * @param {Object} this.args - The arguments to be passed to the container.
-     * @returns {Promise<void>} - A promise that resolves when the orchestration process is complete.
-     */
+
     async orchestrator() {
         try {
             const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays2.csv`);
@@ -89,14 +77,7 @@ class Main {
             process.exit(1);
         }
     }
-    /**
-     * Executes an OpenWhisk action with the provided arguments and logs any errors that occur.
-     *
-     * @async
-     * @function openWhisk
-     * @param {Object} this.args - The arguments to be passed to the OpenWhisk action.
-     * @returns {Promise<void>} - A promise that resolves when the OpenWhisk action execution is complete.
-     */
+
     async openWhisk() {
         try {
             const {executionTime,func} = await executeOpenwhisk(this.args,homeDir);

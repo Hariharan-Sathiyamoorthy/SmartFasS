@@ -5,7 +5,10 @@ import { performance } from 'perf_hooks';
 
 
 /**
- * handle in use conatiners
+ * Execute Openwhisk
+ * @param {Array} args - Arguments
+ * @param {String} homeDir - Home directory
+ * @returns {Object} - Execution time and function name
  */
 
 const execPromise = util.promisify(exec);

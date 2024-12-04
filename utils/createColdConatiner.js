@@ -4,6 +4,12 @@ import util from 'util';
 import { v4 as uuidv4 } from 'uuid';
 const execPromise = util.promisify(exec);
 
+/**
+ * Create a cold container
+ * @param {String} homeDir - Home directory
+ * @returns {String} - Container name
+ */
+
 async function createColdContainer(homeDir){
     try{
         let  containerName = 'coldMitigation_node_'+ uuidv4();

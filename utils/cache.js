@@ -4,18 +4,17 @@ import util from 'util';
 import { createClient } from 'redis';
 import fs from 'fs';
 
+/**
+ * Store the cache in Redis
+ * @param {String} npmPackage - Name of the npm package
+ * @param {String} time - Time of the npm package
+ * @param {String} homeDir - Home directory
+ * @returns {String} - Success message
+ */
+
 const execPromise = util.promisify(exec);
 const client = createClient();
 
-/**
- * change npm package name to dynamic
- */
-
-/**
- * 
- * @param {*} npmPackage 
- * @param {*} time 
- */
 
 const storeCacheInRedis = async (npmPackage,time,homeDir) => {
     let lib_frequency = npmPackage+'_freq'

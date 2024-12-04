@@ -1,5 +1,9 @@
 import fs from 'fs/promises';
 import path from 'path';
+/**
+ * 
+ * @param {Array} args 
+ */
 
 const getRuntime = async (args) => {
     return fs.access(args[0])

@@ -69,7 +69,7 @@ cd ~
     sudo apt-get update
 
     echo "Installing Redis..." 
-    sudo apt-get install redis
+    sudo apt-get install -y redis
 
     echo "Environment setup process completed successfully." 
 } > $LOGFILE 2> $ERRORFILE || {
