@@ -10,6 +10,7 @@
 - JMeter
 - Docker
 - redis
+- OpenWhisk
 
 ## Setup
 
@@ -19,6 +20,7 @@
     ```sh
     npm install
     ```
+4. run the scripts/env_setup.sh to download the Prerequisites
 
 ## Usage
 
