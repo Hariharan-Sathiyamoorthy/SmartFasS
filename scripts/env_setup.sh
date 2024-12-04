@@ -119,6 +119,9 @@ if [ "$choice" -eq 1 ] || [ "$choice" -eq 2 ]; then
             echo "Cloning openwhisk-deploy-kube repository..." 
             git clone https://github.com/apache/openwhisk-deploy-kube.git 
 
+            echo "creating Kind cluster..."
+            sudo ./openwhisk-deploy-kube/deploy/kind/start-kind.sh
+
             echo "Setting up Helm..." 
             curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null 
             sudo apt-get install apt-transport-https --yes 
