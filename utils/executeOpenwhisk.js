@@ -17,7 +17,8 @@ const executeOpenwhisk = async (args,homeDir) => {
         try {
             console.log('Creating Openwhisk Action...');
             const startTime = performance.now();
-            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create ${args[2]} --kind nodejs:default ${homeDir}/project/${args[0]} `);
+            const {stdout: createStdout} = await execPromise(`sudo wsk -i action create ${args[2]} --kind nodejs:default ${homeDir}/SmartFasS
+/${args[0]} `);
             console.log('Invoking Openwhisk Action...');
             const {stdout: invokeStdout} = await execPromise(`sudo wsk -i action invoke ${args[2]} --blocking`);
             const endTime = performance.now();

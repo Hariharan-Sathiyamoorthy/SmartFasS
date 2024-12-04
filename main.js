@@ -44,7 +44,8 @@ class Main {
                 executionType,
                 executionTime
             }]
-            await writeCSVFile(`${homeDir}/project/logs/results/IntiatorOutput2_${this.today.toISOString().slice(0,10)}.csv`, data);
+            await writeCSVFile(`${homeDir}/SmartFasS
+/logs/results/IntiatorOutput2_${this.today.toISOString().slice(0,10)}.csv`, data);
 
         } catch (error) {
             console.error('Error in initiator:', error);
@@ -54,7 +55,8 @@ class Main {
 
     async orchestrator() {
         try {
-            const data = await readCSVFile(`${homeDir}/project/dataset/ML_Delays2.csv`);
+            const data = await readCSVFile(`${homeDir}/SmartFasS
+/dataset/ML_Delays2.csv`);
             let count = 0;
             for (const row of data) {
                 if (count <= 412) {
@@ -86,7 +88,8 @@ class Main {
                 func,
                 executionTime
             }]
-            await writeCSVFile(`${homeDir}/project/logs/results/OpenWhiskOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
+            await writeCSVFile(`${homeDir}/SmartFasS
+/logs/results/OpenWhiskOutput_${this.today.toISOString().slice(0,10)}.csv`, data);
         } catch (error) {
             console.error('Error in openWhisk:', error);
             process.exit(1);

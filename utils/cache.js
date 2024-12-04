@@ -92,7 +92,8 @@ const storeCacheInRedis = async (npmPackage,time,homeDir) => {
 const installNpmPackage = async (containerName,args,homeDir) => {
     try {
         await client.connect();
-        const { stdout: getPackageName } = await execPromise(`cat ${homeDir}/project/${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
+        const { stdout: getPackageName } = await execPromise(`cat ${homeDir}/SmartFasS
+/${args[0]} | grep "require" | sed -e "s/.*require('//" -e "s/');//"`);
         let npmPackages = getPackageName.split('\n').filter(n => n);
         await Promise.all(npmPackages.map(async (npmPackage) => {
             const { stdout: npmView } = await execPromise
