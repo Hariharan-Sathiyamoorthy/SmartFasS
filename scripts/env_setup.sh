@@ -9,7 +9,7 @@ echo "Select an option:"
 echo "1. Install SmartFasS setup"
 echo "2. Install OpenWhisk setup"
 read -p "Enter your choice (1 or 2): " choice
-
+echo "Please wait this setup will take arround 15mins to complete"
 if [ "$choice" -eq 1 ] || [ "$choice" -eq 2 ]; then
     {
         if [ "$choice" -eq 1 ] || [ "$choice" -eq 2 ]; then
