@@ -3,6 +3,7 @@ import exp from 'constants';
 import util from 'util';
 import { createClient } from 'redis';
 import fs from 'fs';
+import { performance } from 'perf_hooks';
 
 /**
  * Store the cache in Redis
@@ -38,7 +39,7 @@ const storeCacheInRedis = async (npmPackage,time,homeDir) => {
         if (totalEntries === 0){
             await client.set(lib_frequency,'NEW')
             await client.set(lib_count,1)
-            await client.set(lib_last_used,'TIME')
+            await client.set(lib_last_used,time)
         }
         else {
             let frequency = await client.get(lib_frequency)
@@ -46,17 +47,17 @@ const storeCacheInRedis = async (npmPackage,time,homeDir) => {
                 let count = parseInt(await client.get(lib_count)) + 1
                 await client.set(lib_frequency,'COMMON')
                 await client.set(lib_count,count)
-                await client.set(lib_last_used,'TIME')
+                await client.set(lib_last_used,time)
             }else if(totalEntries > 0 && frequency === 'COMMON'){
                 let count = parseInt(await client.get(lib_count)) + 1
 
                 await client.set(lib_frequency,'COMMON')
                 await client.set(lib_count,count)
-                await client.set(lib_last_used,'TIME')
+                await client.set(lib_last_used,time)
                 if (count >= 5) {
                     await client.set(lib_frequency,'FREQUENT')
                     await client.set(lib_count,count)
-                    await client.set(lib_last_used,'TIME')
+                    await client.set(lib_last_used,time)
                     exec(`npm cache ls ${npmPackage}`, async (err,stdout,stderr) => {
                         if(err){
                             console.error(err);
@@ -90,6 +91,7 @@ const storeCacheInRedis = async (npmPackage,time,homeDir) => {
 }
 
 const installNpmPackage = async (containerName,args,homeDir) => {
+    let startTime , endTime
     try {
         await client.connect();
         const { stdout: getPackageName } = await execPromise(`cat ${homeDir}/SmartFasS
@@ -104,7 +106,9 @@ const installNpmPackage = async (containerName,args,homeDir) => {
                     const getCacheBool = await client.get(`${npmPackage}_cacheFound`);
                     if(getCacheBool === 'true'){
                         console.time('npm install offline');
+                        startTime = performance.now();
                         const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage} --loglevel=verbose --offline`);
+                        endTime = performance.now();
                         console.timeEnd('npm install offline');
                     }
                     
@@ -112,12 +116,15 @@ const installNpmPackage = async (containerName,args,homeDir) => {
 
                 else {
                     console.time('npm install online');
+                    startTime = performance.now();
                     const { stdout } = await execPromise(`sudo docker exec ${containerName} npm install -g ${npmPackage}`);
+                    endTime = performance.now();
                     console.time('npm install online');
 
                 }
             }
-            await storeCacheInRedis(npmPackage,'Time',homeDir)
+            let time = endTime - startTime;
+            await storeCacheInRedis(npmPackage,time.toString(),homeDir)
         }));
         return 'success';
     } catch (error) {
