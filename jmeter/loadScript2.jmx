@@ -11,8 +11,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="filename">/home/hari73118/SmartFasS
-/dataset/ML_AzureDataset.csv</stringProp>
+        <stringProp name="filename">/home/hari73118/SmartFasS/dataset/ML_AzureDataset.csv</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -55,8 +54,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/home/hari73118/SmartFasS
-/logs/results/ML_Jmeter2_27-11-24.csv</stringProp>
+        <stringProp name="filename">/home/hari73118/SmartFasS/logs/results/ML_Jmeter2_27-11-24.csv</stringProp>
       </ResultCollector>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
@@ -83,8 +81,7 @@
               </elementProp>
               <elementProp name="" elementType="Argument">
                 <stringProp name="Argument.name"></stringProp>
-                <stringProp name="Argument.value">node /home/hari73118/SmartFasS
-/main.js function.js initiate</stringProp>
+                <stringProp name="Argument.value">node /home/hari73118/SmartFasS/main.js function.js initiate</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
