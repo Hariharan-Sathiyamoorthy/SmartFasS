@@ -37,7 +37,7 @@ class Main {
             if (executionType === 'cold') {
                 const msg = await installNpmPackage(containerName, this.args,homeDir);
             }
-            const { execOutput, killOutput, removeOutput, executionTime } = await executeContainer(containerName, this.args, executionType,homeDir);
+            const { execOutput,executionTime } = await executeContainer(containerName, this.args, executionType,homeDir);
             const data = [{
                 time: new Date().toISOString(),
                 containerName,

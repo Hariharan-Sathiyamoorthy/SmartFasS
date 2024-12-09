@@ -16,8 +16,7 @@ const execPromise = util.promisify(exec);
 const executeContainer = async (containerName, args,executionType,homeDir) => {
     console.log(args);
     try {
-        const {stdout} = await execPromise(`sudo docker cp  ${homeDir}/SmartFasS
-/${args[0]} ${containerName}:/root/`);
+        const {stdout} = await execPromise(`sudo docker cp  ${homeDir}/SmartFasS/${args[0]} ${containerName}:/root/`);
         console.log(stdout); 
         const startTime = performance.now();
         const {stdout: execOutput} = await execPromise(`sudo docker exec -i ${containerName} node /root/${args[0]}`);
