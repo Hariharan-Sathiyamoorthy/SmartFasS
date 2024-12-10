@@ -55,9 +55,7 @@ class Main {
     async orchestrator() {
         try {
             const data = await readCSVFile(`${homeDir}/SmartFasS/dataset/ML_Delays2.csv`);
-            let count = 0;
             for (const row of data) {
-                if (count <= 412) {
                 console.log('Starting Orchetration');
                 const runtime = await getRuntime(this.args);
                 const { executionType, containerName } = await checkWarmContainer(runtime,homeDir);
@@ -67,10 +65,6 @@ class Main {
                 console.log('Orchetration Complete:', containerName, executionType);
                 console.log('sleeping for:', parseInt(row.wait));
                 await this.sleep(parseInt(row.wait));
-                }else{
-                    break;
-                }
-                count++;
             };
         } catch (error) {
             console.error('Error reading CSV file:', error);
